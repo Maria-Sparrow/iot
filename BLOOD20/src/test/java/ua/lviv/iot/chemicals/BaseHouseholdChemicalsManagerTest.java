@@ -10,7 +10,7 @@ import ua.lviv.iot.model.DetergentType;
 import org.junit.jupiter.api.BeforeEach;
 
 public abstract class BaseHouseholdChemicalsManagerTest {
-	protected List<AbstractHouseholdChemicals> householdChemicals;
+	public List<AbstractHouseholdChemicals> householdChemicals;
 	
 	@BeforeEach
 	public void chosenHouseholdChemicals()

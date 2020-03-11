@@ -21,19 +21,11 @@ public class HouseholdChemicalsManagerTest extends BaseHouseholdChemicalsManager
 	       List<AbstractHouseholdChemicals> result = householdChemicalsManager.findChemicalsByWeightInGrams(7);
 		assertEquals(1,householdChemicals.get(0).getWeightInGrams());
 		assertEquals(2,householdChemicals.get(1).getWeightInGrams());
-		assertEquals(3,householdChemicals.get(2).getWeightInGrams());
-		
+		assertEquals(4,householdChemicals.get(2).getWeightInGrams());
+	    assertEquals(3,householdChemicals.get(3).getWeightInGrams());
+
 		
 	}
 	
-	/*public class ConstructionGoodsManagerTest extends BaseConstructionGoodsManagerTest {
-
-  @Test
-  public void testFindGoodsCheaperThan() {
-    ConstructionGoodsManager manager = new ConstructionGoodsManager(goods);
-    double testPriceInUah = 60.50;
-    List<AbstractConstructionGoods> result = manager.findGoodsCheaperThan(testPriceInUah, goods);
-
-*/
 
 }
