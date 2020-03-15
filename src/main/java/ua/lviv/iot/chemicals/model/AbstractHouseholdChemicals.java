@@ -1,117 +1,68 @@
 package ua.lviv.iot.chemicals.model;
 
+import ua.lviv.iot.chemicals.model.*;
+
 public abstract class AbstractHouseholdChemicals {
+    protected String producer;
+    protected double priceInUAH;
+    protected int weightInGrams;
+    protected String expirationDate;
+    protected int harmfulnessInPercent;
+    protected int solubilityInPercent;
+    protected String type;
+    protected String smell;
+    protected int thickInPercent;
+    protected double volumeInLiters;
+    protected DetergentType detergentType;
+    
+    public AbstractHouseholdChemicals(String producer, double priceInUAH, int weightInGrams, String expirationDate,
+            int harmfulnessInPercent, int solubilityInPercent, String type, String smell, int thickInPercent,
+            double volumeInLiters, DetergentType detergentType) {
+        super();
+        this.producer = producer;
+        this.priceInUAH = priceInUAH;
+        this.weightInGrams = weightInGrams;
+        this.expirationDate = expirationDate;
+        this.harmfulnessInPercent = harmfulnessInPercent;
+        this.solubilityInPercent = solubilityInPercent;
+        this.type = type;
+        this.smell = smell;
+        this.thickInPercent = thickInPercent;
+        this.volumeInLiters = volumeInLiters;
+        this.detergentType = detergentType;
+    }
 
-	protected String producer;
-	protected double priceInUAH;
-	protected int weightInGrams;
-	protected String expirationDate;
-	protected int harmfulnessInPercent;
-	protected int solubilityInPercent;
-	protected String type;
-	protected String smell;
-	protected int thickInPercent;
-	protected double volumeInLiters;
-	protected DetergentType detergentType;
-	
-	
+    public double getPriceInUAH() {
+        return priceInUAH;
+    }
 
-	
+    public int getWeightInGrams() {
+        return weightInGrams;
+    }
 
-	public String getChemicalsForWindowsByProducer() {
-		return producer;
-	}
+    public DetergentType getDetergentType() {
+        return detergentType;
+    }
 
-	public void setChemicalsForWindowsByProducer(String chemicalsForWindowsByProducer) {
-		this.producer = chemicalsForWindowsByProducer;
-	}
+    public String getProducer() {
+        return producer;
+    }
 
-	public AbstractHouseholdChemicals(String producer) {
-		
-		this.producer = producer;
-	}
-	public double getPriceInUAH() {
-		return priceInUAH;
-	}
+    public int getHarmfulnessInPercent() {
+        return harmfulnessInPercent;
+    }
 
-	public void setPriceInUAH(double priceInUAH) {
-		this.priceInUAH = priceInUAH;
-	}
+    public int getSolubilityInPercent() {
+        return solubilityInPercent;
+    }
 
-	public int getWeightInGrams() {
-		return weightInGrams;
-	}
+    public int compareTo(AbstractHouseholdChemicals secondChemical) {
+        
+        return 0;
+    }
+    
+    
+    
+    
 
-	public void setWeightInGrams(int weightInGrams) {
-		this.weightInGrams = weightInGrams;
-	}
-
-	public String getExpirationDate() {
-		return expirationDate;
-	}
-
-	public void setExpirationDate(String expirationDate) {
-		this.expirationDate = expirationDate;
-	}
-
-	public int getHarmfulnessInPercent() {
-		return harmfulnessInPercent;
-	}
-
-	public void setHarmfulnessInPercent(int harmfulnessInPercent) {
-		this.harmfulnessInPercent = harmfulnessInPercent;
-	}
-
-	public int getSolubilityInPercent() {
-		return solubilityInPercent;
-	}
-
-	public void setSolubilityInPercent(int solubilityInPercent) {
-		this.solubilityInPercent = solubilityInPercent;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public String getSmell() {
-		return smell;
-	}
-
-	public void setSmell(String smell) {
-		this.smell = smell;
-	}
-
-	public int getThickInPercent() {
-		return thickInPercent;
-	}
-
-	public void setThickInPercent(int thickInPercent) {
-		this.thickInPercent = thickInPercent;
-	}
-
-	public double getVolumeInLiters() {
-		return volumeInLiters;
-	}
-
-	public void setVolumeInLiters(double volumeInLiters) {
-		this.volumeInLiters = volumeInLiters;
-	}
-
-	public DetergentType getDetergentType() {
-		return detergentType;
-	}
-
-	public void setDetergentType(DetergentType detergentType) {
-		this.detergentType = detergentType;
-	}
-	
-
-	
-	
-	
 }
