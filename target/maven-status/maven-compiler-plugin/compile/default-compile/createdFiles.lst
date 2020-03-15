@@ -1,0 +1,13 @@
+ua\lviv\iot\chemicals\model\ChemicalsForClothes.class
+ua\lviv\iot\chemicals\manager\HouseholdChemicalsManagerUtils$SorterBySolubility.class
+ua\lviv\iot\chemicals\model\AbstractHouseholdChemicals.class
+ua\lviv\iot\chemicals\model\ChemicalsForFloor.class
+ua\lviv\iot\chemicals\manager\HouseholdChemicalsManagerUtils.class
+ua\lviv\iot\chemicals\model\ChemicalsForWindows.class
+ua\lviv\iot\chemicals\manager\HouseholdChemicalsManagerUtils$1.class
+ua\lviv\iot\chemicals\model\ChemicalsForWashingUp.class
+ua\lviv\iot\chemicals\manager\HouseholdChemicalsManagerUtils$SorterByWeight.class
+ua\lviv\iot\chemicals\App.class
+ua\lviv\iot\chemicals\manager\HouseholdChemicalsManager.class
+ua\lviv\iot\chemicals\model\DetergentType.class
+ua\lviv\iot\chemicals\model\SortType.class
