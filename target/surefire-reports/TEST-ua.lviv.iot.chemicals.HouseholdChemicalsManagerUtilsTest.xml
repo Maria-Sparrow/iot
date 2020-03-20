@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ua.lviv.iot.chemicals.HouseholdChemicalsManagerUtilsTest" time="0.029" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ua.lviv.iot.chemicals.HouseholdChemicalsManagerUtilsTest" time="0.033" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="13"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-13.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\25DA~1\AppData\Local\Temp\surefire6281620454212929594\surefirebooter5467158365062200904.jar C:\Users\маруся\AppData\Local\Temp\surefire6281620454212929594 2020-03-15T21-16-02_406-jvmRun1 surefire9986243618703933506tmp surefire_013262968637688678974tmp"/>
+    <property name="sun.java.command" value="C:\Users\25DA~1\AppData\Local\Temp\surefire17303855094247255651\surefirebooter15626617600699889759.jar C:\Users\маруся\AppData\Local\Temp\surefire17303855094247255651 2020-03-19T20-45-31_642-jvmRun1 surefire5520448020904653916tmp surefire_03301897028580899002tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\projects\evil\unhappy\target\test-classes;D:\projects\evil\unhappy\target\classes;C:\Users\маруся\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\маруся\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\маруся\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;C:\Users\маруся\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\маруся\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\маруся\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\25DA~1\AppData\Local\Temp\surefire6281620454212929594\surefirebooter5467158365062200904.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\25DA~1\AppData\Local\Temp\surefire17303855094247255651\surefirebooter15626617600699889759.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="13.0.2+8"/>
@@ -57,8 +57,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="57.0"/>
   </properties>
-  <testcase name="testSortByHarmfulness" classname="ua.lviv.iot.chemicals.HouseholdChemicalsManagerUtilsTest" time="0.006"/>
-  <testcase name="testSortByWeight" classname="ua.lviv.iot.chemicals.HouseholdChemicalsManagerUtilsTest" time="0.006"/>
+  <testcase name="testSortByHarmfulness" classname="ua.lviv.iot.chemicals.HouseholdChemicalsManagerUtilsTest" time="0.007"/>
+  <testcase name="testSortByWeight" classname="ua.lviv.iot.chemicals.HouseholdChemicalsManagerUtilsTest" time="0.007"/>
   <testcase name="testSortingBySolubility" classname="ua.lviv.iot.chemicals.HouseholdChemicalsManagerUtilsTest" time="0.004"/>
-  <testcase name="testSortByPriceInUAH" classname="ua.lviv.iot.chemicals.HouseholdChemicalsManagerUtilsTest" time="0.006"/>
+  <testcase name="testSortByPriceInUAH" classname="ua.lviv.iot.chemicals.HouseholdChemicalsManagerUtilsTest" time="0.008"/>
 </testsuite>

@@ -1,6 +1,6 @@
-#Sun Mar 15 21:17:18 EET 2020
+#Thu Mar 19 20:46:21 EET 2020
 configuration*?=5220BAF59E8602649BFFB67AD39B880364E3204F
 module-resource*?\:checkstyle-xpath-suppressions.xml=96FFD1892496D1334A59DD8C99814D543A2D0E60
 module-resource*?\:checkstyle-suppressions.xml=2E0B2DB2B631B15505DE40FFBE19180F14F925C9
-D\:\\projects\\evil\\unhappy\\src\\main\\java\\ua\\lviv\\iot\\chemicals\\model\\SortType.java=1584189432283
-D\:\\projects\\evil\\unhappy\\src\\main\\java\\ua\\lviv\\iot\\chemicals\\model\\DetergentType.java=1584189432382
+D\:\\projects\\evil\\unhappy\\src\\main\\java\\ua\\lviv\\iot\\chemicals\\model\\SortType.java=1584345473268
+D\:\\projects\\evil\\unhappy\\src\\main\\java\\ua\\lviv\\iot\\chemicals\\model\\DetergentType.java=1584345473979

@@ -20,14 +20,13 @@ public class HouseholdChemicalsManagerUtils {
     private class SorterBySolubility implements Comparator<AbstractHouseholdChemicals> {
 
         @Override
-        public int compare(AbstractHouseholdChemicals firstChemical,AbstractHouseholdChemicals secondChemical) {
+        public int compare(AbstractHouseholdChemicals firstChemical, AbstractHouseholdChemicals secondChemical) {
             return firstChemical.compareTo(secondChemical);
         }
     }
 
-    public static void sortByWeight(List<AbstractHouseholdChemicals> householdChemicals,SortType sortType) {
-        householdChemicals.sort(sortType == SortType.ASC ? SORTER_BY_WEIGHT
-                : SORTER_BY_WEIGHT.reversed());
+    public static void sortByWeight(List<AbstractHouseholdChemicals> householdChemicals, SortType sortType) {
+        householdChemicals.sort(sortType == SortType.ASC ? SORTER_BY_WEIGHT : SORTER_BY_WEIGHT.reversed());
     }
 
     public static void sortBySolubility(List<AbstractHouseholdChemicals> householdChemicals, SortType sortType) {
@@ -42,16 +41,17 @@ public class HouseholdChemicalsManagerUtils {
                 return Double.compare(firstChemical.getPriceInUAH(), secondChemical.getPriceInUAH());
             }
         };
-        householdChemicals.sort(sortType == SortType.ASC ? chemicalSortByPriceInUAH : chemicalSortByPriceInUAH.reversed());
+        householdChemicals
+                .sort(sortType == SortType.ASC ? chemicalSortByPriceInUAH : chemicalSortByPriceInUAH.reversed());
     }
 
     public static void sortByHarmfulness(List<AbstractHouseholdChemicals> householdChemicals, SortType sortType) {
         if (sortType == SortType.ASC) {
-            householdChemicals.sort((firstChemical, secondChemical) -> Float.compare(firstChemical.getHarmfulnessInPercent(),
-                    secondChemical.getHarmfulnessInPercent()));
+            householdChemicals.sort((firstChemical, secondChemical) -> Integer
+                    .compare(firstChemical.getHarmfulnessInPercent(), secondChemical.getHarmfulnessInPercent()));
         } else {
-            householdChemicals.sort((firstChemical, secondChemical) -> Float.compare(secondChemical.getHarmfulnessInPercent(),
-                    firstChemical.getHarmfulnessInPercent()));
+            householdChemicals.sort((firstChemical, secondChemical) -> Integer
+                    .compare(secondChemical.getHarmfulnessInPercent(), firstChemical.getHarmfulnessInPercent()));
         }
     }
 }

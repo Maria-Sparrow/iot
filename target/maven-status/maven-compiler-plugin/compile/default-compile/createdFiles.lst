@@ -7,6 +7,7 @@ ua\lviv\iot\chemicals\model\ChemicalsForWindows.class
 ua\lviv\iot\chemicals\manager\HouseholdChemicalsManagerUtils$1.class
 ua\lviv\iot\chemicals\model\ChemicalsForWashingUp.class
 ua\lviv\iot\chemicals\manager\HouseholdChemicalsManagerUtils$SorterByWeight.class
+ua\lviv\iot\chemicals\writer\HouseholdChemicalsWriter.class
 ua\lviv\iot\chemicals\App.class
 ua\lviv\iot\chemicals\manager\HouseholdChemicalsManager.class
 ua\lviv\iot\chemicals\model\DetergentType.class

@@ -1,7 +1,5 @@
 package ua.lviv.iot.chemicals.model;
 
-import ua.lviv.iot.chemicals.model.*;
-
 public abstract class AbstractHouseholdChemicals {
     protected String producer;
     protected double priceInUAH;
@@ -14,7 +12,7 @@ public abstract class AbstractHouseholdChemicals {
     protected int thickInPercent;
     protected double volumeInLiters;
     protected DetergentType detergentType;
-    
+
     public AbstractHouseholdChemicals(String producer, double priceInUAH, int weightInGrams, String expirationDate,
             int harmfulnessInPercent, int solubilityInPercent, String type, String smell, int thickInPercent,
             double volumeInLiters, DetergentType detergentType) {
@@ -48,6 +46,26 @@ public abstract class AbstractHouseholdChemicals {
         return producer;
     }
 
+    public String getExpirationDate() {
+        return expirationDate;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getSmell() {
+        return smell;
+    }
+
+    public int getThickInPercent() {
+        return thickInPercent;
+    }
+
+    public double getVolumeInLiters() {
+        return volumeInLiters;
+    }
+
     public int getHarmfulnessInPercent() {
         return harmfulnessInPercent;
     }
@@ -57,12 +75,22 @@ public abstract class AbstractHouseholdChemicals {
     }
 
     public int compareTo(AbstractHouseholdChemicals secondChemical) {
-        
+
         return 0;
     }
-    
-    
-    
-    
+
+    public String getHeaders() {
+        return "producer, priceInUAH, weightInGrams, expirationDate, harmfulnessInPercent, solubilityInPercent, type, "
+                + "smell, thickInPercent, volumeInLiters, detergentType";
+    }
+
+    public String toCSV() {
+        return "producer = " + getProducer() + ", " + "priceInUAH = " + getPriceInUAH() + ", " + "weightInGrams = "
+                + getWeightInGrams() + ", " + "expirationDate = " + getExpirationDate() + ", "
+                + "harmfulnessInPercent = " + getHarmfulnessInPercent() + "," + "solubilityInPercent = "
+                + getSolubilityInPercent() + ", " + "type = " + getType() + ", " + "smell = " + getSmell() + ", "
+                + "thickInPercent = " + getThickInPercent() + ", " + "volumeInLiters = " + getVolumeInLiters() + ", "
+                + "detergentType = " + getDetergentType();
+    }
 
 }
