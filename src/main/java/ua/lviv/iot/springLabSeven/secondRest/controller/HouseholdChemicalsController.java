@@ -1,5 +1,7 @@
 package ua.lviv.iot.springLabSeven.secondRest.controller;
 
+import static org.springframework.http.HttpStatus.NOT_FOUND;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -19,17 +21,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ua.lviv.iot.springLabSeven.secondRest.business.ChemicalsServise;
+import ua.lviv.iot.springLabSeven.secondRest.business.ChemicalsService;
 import ua.lviv.iot.springLabSeven.secondRest.model.HouseholdChemical;
 
-@RequestMapping("/chemical")
+@RequestMapping("/chemicals")
 @RestController
 public class HouseholdChemicalsController {
     private Map<Integer, HouseholdChemical> householdChemicals = new HashMap<>();
     private AtomicInteger idCounter = new AtomicInteger();
 
     @Autowired
-    private ChemicalsServise chemicalsServise;
+    private ChemicalsService chemicalsServise;
 
     @GetMapping
     public List<HouseholdChemical> getHouseholdChemicals() {
@@ -42,7 +44,7 @@ public class HouseholdChemicalsController {
     }
 
     @PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
-    public HouseholdChemical createHouseholdChemical(final @RequestBody HouseholdChemical householdChemical) {
+    public HouseholdChemical createHouseholdChemical(@RequestBody HouseholdChemical householdChemical) {
         System.out.println(chemicalsServise.createHouseholdChemical(householdChemical));
         householdChemical.setId(idCounter.incrementAndGet());
         householdChemicals.put(householdChemical.getId(), householdChemical);
@@ -58,9 +60,13 @@ public class HouseholdChemicalsController {
     }
 
     @PutMapping(path = "/{id}")
-    public HouseholdChemical updateHouseholdChemical(final @PathVariable("id") Integer householdChemicalId,
+    public ResponseEntity<HouseholdChemical> updateHouseholdChemical(final @PathVariable("id") Integer householdChemicalId,
             final @RequestBody HouseholdChemical householdChemical) {
         householdChemical.setId(householdChemicalId);
-        return householdChemicals.put(householdChemicalId, householdChemical);
-    }
+        if(householdChemicals.containsKey(householdChemicalId)) {
+            return ResponseEntity.ok(householdChemicals.put(householdChemicalId, householdChemical));
+        }else {
+            return ResponseEntity.status(NOT_FOUND).build();
+        }
+     }
 }

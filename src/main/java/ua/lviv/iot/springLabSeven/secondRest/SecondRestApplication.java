@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan({ "ua.lviv.iot.springLabSeven.secondRest.dataAccess", "ua.lviv.iot.springLabSeven.secondRest.business" })
+@ComponentScan
 @EnableJpaRepositories({ "ua.lviv.iot.springLabSeven.secondRest.dataAccess" })
 public class SecondRestApplication {
 
@@ -15,3 +15,4 @@ public class SecondRestApplication {
     }
 
 }
+

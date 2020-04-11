@@ -1,10 +1,16 @@
 package ua.lviv.iot.springLabSeven.secondRest.model;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 public class HouseholdChemical {
     protected String producer;
@@ -19,6 +25,15 @@ public class HouseholdChemical {
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     protected Integer id;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "group_id")
+    @JsonIgnoreProperties("householdChemical")
+
+    protected Section group;
+
+    public HouseholdChemical() {
+
+    }
 
     public HouseholdChemical(String producer, int priceInUAH, int weightInGrams, String expirationDate, String name,
             int solubilityInPercent, String smell) {
@@ -30,7 +45,9 @@ public class HouseholdChemical {
         this.solubilityInPercent = solubilityInPercent;
         this.smell = smell;
     }
-
+    public HouseholdChemical(String producer, int priceInUAH,String name) {
+        this(null, 0, 0,null,null,0,null);
+    }
     public Integer getId() {
         return id;
     }
@@ -93,6 +110,14 @@ public class HouseholdChemical {
 
     public void setSmell(String smell) {
         this.smell = smell;
+    }
+
+    public Section getGroup() {
+        return group;
+    }
+
+    public void setGroup(Section group) {
+        this.group = group;
     }
 
 }
