@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ua.lviv.iot.springLabSeven.secondRest.business.SectionService;
+import ua.lviv.iot.business.SectionService;
 import ua.lviv.iot.springLabSeven.secondRest.model.Section;
 
 @RequestMapping("/section")

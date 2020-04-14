@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-	</properties>
+	</properties> 
 
 	<dependencies>
 		<dependency>
@@ -32,9 +32,10 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<!-- add my sql dependency -->
 		<dependency>
-			<groupId>org.hsqldb</groupId>
-			<artifactId>hsqldb</artifactId>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
