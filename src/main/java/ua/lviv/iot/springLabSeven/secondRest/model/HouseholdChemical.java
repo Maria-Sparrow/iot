@@ -25,11 +25,7 @@ public class HouseholdChemical {
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     protected Integer id;
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "group_id")
-    @JsonIgnoreProperties("householdChemical")
-
-    protected Section group;
+    //protected Section group;
 
     public HouseholdChemical() {
 
@@ -112,12 +108,14 @@ public class HouseholdChemical {
         this.smell = smell;
     }
 
-    public Section getGroup() {
+   /* public Section getGroup() {
         return group;
     }
 
     public void setGroup(Section group) {
         this.group = group;
-    }
+    }*/
+
+   
 
 }
